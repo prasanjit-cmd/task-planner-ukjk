@@ -1,0 +1,116 @@
+{
+  "name": "Task Planner",
+  "description": "A full-stack Google Ads operations agent built around quota-aware ingestion, analysis, recommendation triage, approval-gated mutation execution, durable audit history, RAG memory, and a Mission Control dashboard. The architecture uses Google Ads REST as the primary integration, SQLite for structured state and analytics, a vector database for account memory and historical explanations, custom dashboard APIs for read models, and OpenClaw chat surfaces for conversational control and approvals. The plan favors explicit guardrails, bounded mutation batches, daily and intra-day syncs, durable change history, and granular skills that can be composed into scheduled workflows or manual operator actions.",
+  "skills": [
+    "google-ads-auth",
+    "google-ads-account-discovery",
+    "google-ads-structure-sync",
+    "google-ads-metrics-sync",
+    "google-ads-recommendation-sync",
+    "google-ads-anomaly-analysis",
+    "google-ads-action-planner",
+    "google-ads-mutation-executor",
+    "google-ads-outcome-evaluator",
+    "google-ads-dashboard-api",
+    "google-ads-memory-rag"
+  ],
+  "triggers": [],
+  "channels": [],
+  "runtimeInputs": [
+    {
+      "key": "GOOGLE_ADS_DEVELOPER_TOKEN",
+      "required": true,
+      "label": "Google Ads Developer Token"
+    },
+    {
+      "key": "GOOGLE_CLIENT_ID",
+      "required": true,
+      "label": "Google OAuth Client ID"
+    },
+    {
+      "key": "GOOGLE_CLIENT_SECRET",
+      "required": true,
+      "label": "Google OAuth Client Secret"
+    },
+    {
+      "key": "GOOGLE_REFRESH_TOKEN",
+      "required": true,
+      "label": "Google OAuth Refresh Token"
+    },
+    {
+      "key": "GOOGLE_ADS_LOGIN_CUSTOMER_ID",
+      "required": true,
+      "label": "Google Ads MCC Login Customer ID"
+    },
+    {
+      "key": "GOOGLE_ADS_API_VERSION",
+      "required": true,
+      "label": "Google Ads API Version"
+    },
+    {
+      "key": "GOOGLE_ADS_BASE_URL",
+      "required": true,
+      "label": "Google Ads API Base URL"
+    },
+    {
+      "key": "AGENT_ENCRYPTION_KEY",
+      "required": true,
+      "label": "Agent Encryption Key"
+    },
+    {
+      "key": "GOOGLE_ADS_CUSTOMER_IDS",
+      "required": true,
+      "label": "Allowed Google Ads Customer IDs"
+    },
+    {
+      "key": "GOOGLE_SYNC_HIGH_PRIORITY_ACCOUNT_IDS",
+      "required": true,
+      "label": "High Priority Account IDs"
+    },
+    {
+      "key": "GOOGLE_REPORTING_TIMEZONE_OVERRIDE",
+      "required": true,
+      "label": "Reporting Timezone Override"
+    },
+    {
+      "key": "GOOGLE_ADS_DEFAULT_CURRENCY",
+      "required": true,
+      "label": "Default Currency Fallback"
+    },
+    {
+      "key": "GOOGLE_ALERT_CPA_SPIKE_THRESHOLD_PCT",
+      "required": true,
+      "label": "CPA Spike Threshold Percent"
+    },
+    {
+      "key": "GOOGLE_ALERT_SPEND_SPIKE_THRESHOLD_PCT",
+      "required": true,
+      "label": "Spend Spike Threshold Percent"
+    },
+    {
+      "key": "GOOGLE_ACTION_REQUIRE_APPROVAL_DEFAULT",
+      "required": true,
+      "label": "Require Approval by Default"
+    },
+    {
+      "key": "GOOGLE_ACTION_MAX_MUTATE_OPS",
+      "required": true,
+      "label": "Max Mutate Operations Per Request"
+    },
+    {
+      "key": "SQLITE_DATABASE_PATH",
+      "required": true,
+      "label": "SQLite Database Path"
+    },
+    {
+      "key": "VECTOR_DB_URL",
+      "required": true,
+      "label": "Vector Database URL"
+    },
+    {
+      "key": "VECTOR_DB_API_KEY",
+      "required": true,
+      "label": "Vector Database API Key"
+    }
+  ]
+}
